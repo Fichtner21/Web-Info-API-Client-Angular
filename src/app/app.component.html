@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <nav>
+    <a mat-flat-button color="primary" routerLink="" class="btn">Home</a>
+    <a mat-flat-button color="primary" routerLink="about" class="btn">About</a>
+  </nav>
+  <ng-template #notAuthorized>
+    <div> 
+        <a routerLink="auth/register" class="nav-link btn" mat-button>Register</a> 
+        <a routerLink="auth/login" class="nav-link btn" mat-button>Login</a> 
+    </div>  
+    </ng-template>
+    <div *ngIf="isUserLogged$ | async; else notAuthorized">
+        <button (click)="logout()" class="btn" mat-button>Log out</button>
+    </div>
+</mat-toolbar>
+
+<!-- <h4>mat-select</h4>
+<mat-form-field>
+  <mat-label>State</mat-label>
+  <mat-select>
+     <input (keyup)="onKey($event.target.value)">
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let state of selectedStates" [value]="state">{{state}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<router-outlet></router-outlet>

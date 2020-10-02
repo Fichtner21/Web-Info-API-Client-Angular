@@ -1,0 +1,49 @@
+<h2>Register</h2>
+
+<div>Event binding (zobacz w consoli)</div>
+<label>wpisz coś</label>
+<input type="text" (change)="onInputChange($event)"/>
+<br>
+<hr>
+<br>
+
+<form (ngSubmit)="onSubmit($event)" #registerForm="ngForm">
+    <div>
+        <label>
+            <span>E-mail</span>   
+            <input type="email" [(ngModel)]="user.email" name="email" #email="ngModel" required pattern="[a-z]@[a-z]"/>
+            <!-- pattern tylko testowo pattern="[a-z]@[a-z]"-->
+        </label> 
+        <!-- touched(był) - untouched(nie bylo) -->
+        <!--  dirty (zmienil wartosc) - pristine (nie zmienil wartosci) -->
+        <!-- value: {{email.value}}; -->
+        <!-- valid: {{email.valid}}; -->
+        <!-- touched: {{email.touched}}; -->
+        <span *ngIf="email.errors?.pattern">Wrong email format</span>
+        <span>Aby dostać odpowiedz z przykłądowego api wpisz mail: eve.holt@reqres.in</span>
+        <span *ngIf="email.dirty && email.errors?.required">
+            This field is required
+        </span>
+    </div>
+   
+    <div>
+        <label for="password">Hasło</label>
+        <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="8" (change)="onChange(user.password)"/>
+
+        <!-- value: {{password.value}}; -->
+        <!-- valid: {{password.valid}}; -->
+        <!-- touched: {{password.touched}}; -->
+        <!-- statusChanges: {{password.statusChanges | async}};         -->
+        <span *ngIf="password.dirty && password.errors?.required">
+            This field is required
+          </span>
+      
+          <span *ngIf="password.dirty && password.errors?.minlength">
+            This field should be at least 8 chars
+          </span>
+    </div>
+    
+    
+    <button type="submit" [disabled]="registerForm.invalid" class="btn">Register</button>
+    <button type="reset" class="btn">Reset</button>
+</form>

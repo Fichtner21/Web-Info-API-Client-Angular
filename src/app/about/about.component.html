@@ -1,0 +1,22 @@
+<p>about works!</p>
+<mat-accordion>  
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false"
+                       [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3><mat-icon>stars</mat-icon>Top 3 artystów</h3>
+      </mat-panel-title>
+      <mat-panel-description>
+        <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list-item *ngFor="let artist of artistName">      
+      <div matLine><mat-icon matListIcon>person</mat-icon>{{ artist }}</div>
+    </mat-list-item>
+  </mat-expansion-panel>  
+</mat-accordion>
+
+<hr>
+
+<div>{{ resZgierz |json }}</div>
