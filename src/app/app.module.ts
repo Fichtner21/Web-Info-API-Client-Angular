@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+// import { AboutComponent } from './about/about.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,13 +17,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
+// import { WebsiteListComponent } from './about/website-list/website-list.component';
+// import { SingleWebsiteComponent } from './about/single-website/single-website.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,          
+    //AboutComponent,
+    //WebsiteListComponent,
+    //SingleWebsiteComponent,             
   ],
   imports: [
     BrowserModule,

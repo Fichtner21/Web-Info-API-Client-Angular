@@ -1,5 +1,11 @@
+<div *ngIf="route.children.length === 0">
 <p>about works!</p>
-<mat-accordion>  
+<mat-toolbar>
+  <nav>
+    <a mat-flat-button color="primary" routerLink="list" class="btn">List</a>    
+  </nav>
+  </mat-toolbar>
+<!-- <mat-accordion>  
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false"
                        [expanded]="true">
@@ -8,27 +14,29 @@
         <h3><mat-icon>stars</mat-icon>Top 3 artystów</h3>
       </mat-panel-title>
       <mat-panel-description>
-        <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+      <!--  Currently I am {{panelOpenState ? 'open' : 'closed'}} 
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-list-item *ngFor="let artist of artistName">      
       <div matLine><mat-icon matListIcon>person</mat-icon>{{ artist }}</div>
     </mat-list-item>
   </mat-expansion-panel>  
-</mat-accordion>
+</mat-accordion> -->
 
 
 
 
 <hr>
 <!-- <div>{{ resFrombork | json }}</div> -->
-<div>{{ transientLastChecked }}</div>
+<!-- <div>{{ transientLastChecked }}</div>
 
-<div>{{ transient | json }}</div>
+ <div>{{ transient | json }}</div> -->
 
 <!-- <div>{{ resZgierz | json }}</div> -->
 <hr>
 <hr>
 <hr>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, obcaecati tenetur sapiente adipisci sunt excepturi consequatur facilis accusantium laboriosam officiis reiciendis rem quae illum repellendus corporis dignissimos sequi repudiandae nostrum.
 <!-- <div>{{ resRzepin | json}}</div> -->
-
+</div>
+<router-outlet></router-outlet>
