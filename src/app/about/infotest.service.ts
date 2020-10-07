@@ -12,6 +12,10 @@ export class InfotestService {
 
   public API_INFO_ZGIERZ = "https://cors-anywhere.herokuapp.com/http://portal.zgierz.pl/wp-json/website_info/v1/website-details/";  
 
+  public API_INFO_RZEPIN = "https://cors-anywhere.herokuapp.com/http://rzepin.nowoczesnyurzad.pl/wp-json/website_info/v1/website-details/"; 
+
+  public API_INFO_FROMBORK = "https://cors-anywhere.herokuapp.com/http://frombork.nowoczesnyurzad.pl/wp-json/website_info/v1/website-details/"; 
+
   constructor(private _http: HttpClient) { }
 
   getTop3Artists(): Observable<any>{
@@ -20,23 +24,36 @@ export class InfotestService {
     )
   }
 
-  getInfoNysa(): Observable<any>{
+  getInfoZgierz(): Observable<any>{
     let headers = new HttpHeaders()
     headers=headers.set('username', 'ernest.fichtner')
     .set('password', 'oB$R*hYQaI(AKQDGbh7E7MZ&')
-    .set('Content-type', 'application/json');
-    //headers=headers.set('Access-Control-Allow-Origin', 'http://portal.zgierz.pl');   
-    //console.log(headers.lazyUpdate);
+    .set('Content-type', 'application/json');   
 
     return this._http.get(this.API_INFO_ZGIERZ,{headers: headers}).pipe(
       map((result) => result)      
     )
-  }  
+  } 
 
-  
+  getInfoRzepin(): Observable<any>{
+    let headers = new HttpHeaders()
+    headers=headers.set('Username', 'sputnik')
+    .set('Password', 'oB$R*hYQaI(AKQDGbh7E7MZ&')
+    .set('Content-type', 'application/json');   
 
-  
-  // getInfo(){
-  //   console.log('HEADERS: ', this.headers.keys());
-  // }
+    return this._http.get(this.API_INFO_RZEPIN,{headers: headers}).pipe(
+      map((result) => result)      
+    )
+  }
+
+  getInfoFrombork(): Observable<any>{
+    let headers = new HttpHeaders()
+    headers=headers.set('Username', 'sputnik')
+    .set('Password', 'oB$R*hYQaI(AKQDGbh7E7MZ&')
+    .set('Content-type', 'application/json');   
+
+    return this._http.get(this.API_INFO_FROMBORK,{headers: headers}).pipe(
+      map((result) => result)      
+    )
+  }
 }
