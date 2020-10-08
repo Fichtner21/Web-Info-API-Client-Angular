@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Color } from '../model/color';
+import { Webinfo } from '../model/webinfo';
 import { ActivatedRoute } from '@angular/router';
-import { WebsiteService } from '../website.service';
+import { FromfileService } from '../fromfile.service';
 
 
 @Component({
@@ -10,18 +10,26 @@ import { WebsiteService } from '../website.service';
   styleUrls: ['./single-website.component.scss']
 })
 export class SingleWebsiteComponent implements OnInit, OnDestroy {
-  public colorName: string;
-  public errorMessage: string;
+  public webinfo: Webinfo;
+  public errorMessage: string;  
 
-  constructor(private activatedRoute: ActivatedRoute, private colorsService:WebsiteService) { }
+  constructor(private activatedRoute: ActivatedRoute, private fromfileService:FromfileService) { 
+    console.log(activatedRoute);
+  }
 
   async ngOnInit(): Promise<void> {
-    const id: string = this.activatedRoute.snapshot.params.id;
-    const colorId: number = Number.parseInt(id, 10);
+    const shortname: string = this.activatedRoute.snapshot.params.shortname;   
+    console.log('shortname', shortname);
+    // this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
+    // this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
+    // console.log('THIS.WEBIFNO', this.webinfo);    
+   
+    this.fromfileService.getSingleWebsite(shortname).subscribe(res => {
+      this.webinfo = res.data;
+      console.log(this.webinfo);
 
-    const color: Color = await this.colorsService.getSingleColor(colorId);
-    console.log('color',color);
-    this.colorName = color.name;
+    })
+    
   }
 
   public ngOnDestroy(): void{

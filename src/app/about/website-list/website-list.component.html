@@ -1,6 +1,6 @@
 <p>website-list works!</p>
 <ul>
-  <li *ngFor="let color of colors">
-    <a routerLink="/about/{{color.id}}">{{ color | displayColor }}</a>
+  <li *ngFor="let webinfo of webinfos">
+    <a routerLink="/about/{{webinfo.shortname}}">{{ webinfo.shortname | json }}</a>
   </li>
 </ul>

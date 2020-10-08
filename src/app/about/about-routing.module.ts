@@ -15,7 +15,7 @@ const routes: Routes = [
         component: WebsiteListComponent,
       },
       {
-        path: ':id',
+        path: ':shortname',
         component: SingleWebsiteComponent,
       }
     ]

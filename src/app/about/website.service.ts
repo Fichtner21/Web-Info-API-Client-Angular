@@ -29,4 +29,8 @@ export class WebsiteService {
   public async getSingleColor(id: number): Promise<Color>{
     return COLOR.filter((color: Color) => id === color.id)[0];
   }
+
+  public async getSingleName(name: string): Promise<Color>{
+    return COLOR.filter((color: Color) => name === color.name)[0];
+  }
 }

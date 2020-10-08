@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Color } from '../model/color';
-import { WebsiteService } from '../website.service';
+import { Webinfo } from '../model/webinfo';
+import { FromfileService } from '../fromfile.service';
 
 @Component({
   selector: 'app-website-list',
@@ -8,13 +8,13 @@ import { WebsiteService } from '../website.service';
   styleUrls: ['./website-list.component.scss']
 })
 export class WebsiteListComponent implements OnInit {
-  public colors: Color[];
+  public webinfos: Webinfo[];
 
-  constructor(private colorsService: WebsiteService) { }
+  constructor(private fromfileService: FromfileService) { }
 
   async ngOnInit(): Promise<void> {
-    const colors = await this.colorsService.getColors();
-    this.colors = colors;
+    const webinfos = await this.fromfileService.getWebsites();
+    this.webinfos = webinfos;
   }
 
 }
