@@ -24,11 +24,14 @@ export class SingleWebsiteComponent implements OnInit, OnDestroy {
     // this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
     // console.log('THIS.WEBIFNO', this.webinfo);    
    
-    this.fromfileService.getSingleWebsite(shortname).subscribe(res => {
-      this.webinfo = res.data;
-      console.log(this.webinfo);
+    // this.fromfileService.getSingleWebsite(shortname).subscribe(res => {
+    //  //this.webinfo = res.data.map(res => res.shortname);
+    //  //console.log('RES', this.webinfo);
+    //   console.log('RES', res);
+    // })
 
-    })
+    this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
+    console.log(this.webinfo);
     
   }
 

@@ -1,0 +1,203 @@
+{ 
+  "page": 1,
+  "per_page": 2,
+  "total" : 2,
+  "total_pages": 2,
+  "data": [ 
+  {
+    "shortname": "frombork",
+    "id": 1,
+    "plugins" : {
+      "Anti-Malware Security and Brute-Force Firewall": "4.19.50",
+      "Declaration": "1.0.0",
+      "InfiniteWP - Client": "1.9.4.6",
+      "iThemes Security": "7.6.1",
+      "Shield Security": "9.2.1",
+      "Sucuri Security - Auditing, Malware Scanner and Hardening": "1.8.24",
+      "Web Info API with Auth": "0.1.2",
+      "WP SMTP": "1.1.10"
+    },
+    "plugins_active": {
+      "InfiniteWP - Client": "1.9.4.6",
+      "iThemes Security": "7.6.1",
+      "Declaration": "1.0.0",
+      "Anti-Malware Security and Brute-Force Firewall": "4.19.50",
+      "Sucuri Security - Auditing, Malware Scanner and Hardening": "1.8.24",
+      "Web Info API with Auth": "0.1.2",
+      "Shield Security": "9.2.1"
+    },
+    "theme": {
+      "theme_name": "Frombork Nowoczesny Urząd",
+      "theme_ver": "1.0",
+      "theme_author": "ADHD Interactive"
+    },
+    "health_status": {
+      "siteurl": "http://frombork.nowoczesnyurzad.pl",
+      "home": "http://frombork.nowoczesnyurzad.pl",
+      "blogname": "Frombork",
+      "blogdescription": "Kolejna witryna oparta na WordPressie",
+      "users_can_register": "0",
+      "admin_email": "p.minge@gmail.com"
+    },
+    "transient" : {
+      "0": {
+        "updates": "",
+        "last_checked": 1602157109,
+        "version_checked": "4.9.15",
+        "translations": []
+      },
+      "1": {
+        "last_checked": 1602157112,
+        "checked": {
+            "gotmls/index.php": "4.19.50",
+            "declaration/declaration.php": "1.0.0",
+            "iwp-client/init.php": "1.9.4.6",
+            "better-wp-security/better-wp-security.php": "7.6.1",
+            "wp-simple-firewall/icwp-wpsf.php": "9.2.1",
+            "sucuri-scanner/sucuri.php": "1.8.24",
+            "web-info-api/web-info-api.php": "0.1.2",
+            "wp-smtp/wp-smtp.php": "1.1.10"
+        },
+        "response": {
+          "gotmls/index.php": {
+              "id": "w.org/plugins/gotmls",
+              "slug": "gotmls",
+              "plugin": "gotmls/index.php",
+              "new_version": "4.19.69",
+              "url": "https://wordpress.org/plugins/gotmls/",
+              "package": "https://downloads.wordpress.org/plugin/gotmls.4.19.69.zip",
+              "icons": {
+                  "2x": "https://ps.w.org/gotmls/assets/icon-256x256.png?rev=1001824",
+                  "1x": "https://ps.w.org/gotmls/assets/icon-128x128.png?rev=1001824"
+              },
+              "banners": {
+                  "1x": "https://ps.w.org/gotmls/assets/banner-772x250.jpg?rev=1043954"
+              },
+              "banners_rtl": [],
+              "upgrade_notice": "<p>Fixed a JavaScript error caused by a new French translation and checked code for compatibility with WordPress 5.4.1.</p>",
+              "tested": "5.4.2",
+              "requires_php": false,
+              "compatibility": []
+          },
+          "wp-smtp/wp-smtp.php": {
+              "id": "w.org/plugins/wp-smtp",
+              "slug": "wp-smtp",
+              "plugin": "wp-smtp/wp-smtp.php",
+              "new_version": "1.2.1",
+              "url": "https://wordpress.org/plugins/wp-smtp/",
+              "package": "https://downloads.wordpress.org/plugin/wp-smtp.1.2.1.zip",
+              "icons": {
+                  "1x": "https://ps.w.org/wp-smtp/assets/icon-128x128.png?rev=2351919"
+              },
+              "banners": {
+                  "1x": "https://ps.w.org/wp-smtp/assets/banner-772x250.png?rev=2348247"
+              },
+              "banners_rtl": [],
+              "tested": "5.5.1",
+              "requires_php": false,
+              "compatibility": []
+          }
+        },
+        "translations": []
+      }
+    }
+  },
+  {
+    "shortname": "frombork2",
+    "id": 2,
+    "plugins" : {
+      "Anti-Malware Security and Brute-Force Firewall": "4.19.50",
+      "Declaration": "1.0.0",
+      "InfiniteWP - Client": "1.9.4.6",
+      "iThemes Security": "7.6.1",
+      "Shield Security": "9.2.1",
+      "Sucuri Security - Auditing, Malware Scanner and Hardening": "1.8.24",
+      "Web Info API with Auth": "0.1.2",
+      "WP SMTP": "1.1.10"
+    },
+    "plugins_active": {
+      "InfiniteWP - Client": "1.9.4.6",
+      "iThemes Security": "7.6.1",
+      "Declaration": "1.0.0",
+      "Anti-Malware Security and Brute-Force Firewall": "4.19.50",
+      "Sucuri Security - Auditing, Malware Scanner and Hardening": "1.8.24",
+      "Web Info API with Auth": "0.1.2",
+      "Shield Security": "9.2.1"
+    },
+    "theme": {
+      "theme_name": "Frombork2 Nowoczesny Urząd",
+      "theme_ver": "1.0",
+      "theme_author": "ADHD Interactive"
+    },
+    "health_status": {
+      "siteurl": "http://frombork.nowoczesnyurzad.pl",
+      "home": "http://frombork.nowoczesnyurzad.pl",
+      "blogname": "Frombork",
+      "blogdescription": "Kolejna witryna oparta na WordPressie",
+      "users_can_register": "0",
+      "admin_email": "p.minge@gmail.com"
+    },
+    "transient" : {
+      "0": {
+        "updates": "",
+        "last_checked": 1602157109,
+        "version_checked": "4.9.15",
+        "translations": []
+      },
+      "1": {
+        "last_checked": 1602157112,
+        "checked": {
+            "gotmls/index.php": "4.19.50",
+            "declaration/declaration.php": "1.0.0",
+            "iwp-client/init.php": "1.9.4.6",
+            "better-wp-security/better-wp-security.php": "7.6.1",
+            "wp-simple-firewall/icwp-wpsf.php": "9.2.1",
+            "sucuri-scanner/sucuri.php": "1.8.24",
+            "web-info-api/web-info-api.php": "0.1.2",
+            "wp-smtp/wp-smtp.php": "1.1.10"
+        },
+        "response": {
+          "gotmls/index.php": {
+              "id": "w.org/plugins/gotmls",
+              "slug": "gotmls",
+              "plugin": "gotmls/index.php",
+              "new_version": "4.19.69",
+              "url": "https://wordpress.org/plugins/gotmls/",
+              "package": "https://downloads.wordpress.org/plugin/gotmls.4.19.69.zip",
+              "icons": {
+                  "2x": "https://ps.w.org/gotmls/assets/icon-256x256.png?rev=1001824",
+                  "1x": "https://ps.w.org/gotmls/assets/icon-128x128.png?rev=1001824"
+              },
+              "banners": {
+                  "1x": "https://ps.w.org/gotmls/assets/banner-772x250.jpg?rev=1043954"
+              },
+              "banners_rtl": [],
+              "upgrade_notice": "<p>Fixed a JavaScript error caused by a new French translation and checked code for compatibility with WordPress 5.4.1.</p>",
+              "tested": "5.4.2",
+              "requires_php": false,
+              "compatibility": []
+          },
+          "wp-smtp/wp-smtp.php": {
+              "id": "w.org/plugins/wp-smtp",
+              "slug": "wp-smtp",
+              "plugin": "wp-smtp/wp-smtp.php",
+              "new_version": "1.2.1",
+              "url": "https://wordpress.org/plugins/wp-smtp/",
+              "package": "https://downloads.wordpress.org/plugin/wp-smtp.1.2.1.zip",
+              "icons": {
+                  "1x": "https://ps.w.org/wp-smtp/assets/icon-128x128.png?rev=2351919"
+              },
+              "banners": {
+                  "1x": "https://ps.w.org/wp-smtp/assets/banner-772x250.png?rev=2348247"
+              },
+              "banners_rtl": [],
+              "tested": "5.5.1",
+              "requires_php": false,
+              "compatibility": []
+          }
+        },
+        "translations": []
+      }
+    }
+  }
+]} 

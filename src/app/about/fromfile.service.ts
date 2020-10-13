@@ -31,12 +31,13 @@ export class FromfileService {
   //   return response.data;
   // }
 
-  getSingleWebsite(shortname: string): Observable<any>{
-    return this.httpClient.get<SingleWebsiteResponse>(FromfileService.API_WEBSITES).pipe(map(jsonContent => jsonContent.data), filter(data => data.shortname === shortname))
-  }
+//  public async getSingleWebsite(shortname: string): Promise<Webinfo>{
+//   const response = await this.httpClient.get<SingleWebsiteResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data), filter(data => data.shortname === shortname)).toPromise();
+//   return response.data;
+//  }
 
-  // public async getSingleWebsiteId(id: number): Promise<Webinfo>{
-  //   const response = await this.httpClient.get<SingleWebsiteResponse>(`${FromfileService.API_WEBSITES}/${id}`).toPromise();
-  //   return response.data;
-  // }  
+  public async getSingleWebsite(shortname: string): Promise<Webinfo>{
+   const response = await this.httpClient.get<WebsiteListResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data),filter(data => data.shortname === shortname)).toPromise();
+   return response;
+  } 
 }
