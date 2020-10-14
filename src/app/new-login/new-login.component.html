@@ -1,0 +1,24 @@
+<div class="login-cont">
+  <h2 class="text-center">Login</h2>
+  <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" placeholder="E-mail" formControlName="email" autocomplete="email"/>
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password" autocomplete="current-password"/>
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">Log in</button>
+    </div>
+  </form>
+</div>

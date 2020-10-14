@@ -17,7 +17,7 @@ export class AuthService {
 
   public static readonly API_URL = 'https://reqres.in/api/';
 
-  public isUserLogged$: BehaviorSubject<boolean> = new  BehaviorSubject(
+  public isUserLogged$: BehaviorSubject<boolean> = new BehaviorSubject(
     this.isUserLogged()
     // !!sessionStorage.getItem('session-token'), //!! zamiana string na boolean
   ); //to jest stream(strumień)

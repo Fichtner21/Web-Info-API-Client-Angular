@@ -10,31 +10,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FromfileService {
-  private static readonly API_WEBSITES = '/assets/websites/websites.json';
-
-  public API_PUBLIC = '/assets/websites/websites.json';
+  private static readonly API_WEBSITES = '/assets/websites/websites.json';  
   
   constructor(private httpClient: HttpClient) { }
 
   public async getWebsites(): Promise<Webinfo[]> {
     const response = await this.httpClient.get<WebsiteListResponse>(FromfileService.API_WEBSITES).toPromise();
     return response.data;
-  }
-
-  // public async getSingleWebsite(shortname: string): Promise<Webinfo> {
-  //   const response = await this.httpClient.get<SingleWebsiteResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data), filter(data => data.shortname === shortname));
-  //   return response.data;
-  // }
-
-  // public async getSingleWebsite(shortname: string): Promise<Webinfo> {
-  //   const response = await this.httpClient.get<SingleWebsiteResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data), filter(data => data.shortname === shortname));
-  //   return response.data;
-  // }
-
-//  public async getSingleWebsite(shortname: string): Promise<Webinfo>{
-//   const response = await this.httpClient.get<SingleWebsiteResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data), filter(data => data.shortname === shortname)).toPromise();
-//   return response.data;
-//  }
+  }  
 
   public async getSingleWebsite(shortname: string): Promise<Webinfo>{
    const response = await this.httpClient.get<WebsiteListResponse>(FromfileService.API_WEBSITES).pipe(flatMap(jsonContent => jsonContent.data),filter(data => data.shortname === shortname)).toPromise();

@@ -11,12 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { NewLoginComponent } from './new-login/new-login.component';
+import { NewRegisterComponent } from './new-register/new-register.component';
+import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
 // import { WebsiteListComponent } from './about/website-list/website-list.component';
 // import { SingleWebsiteComponent } from './about/single-website/single-website.component';
 
@@ -25,6 +28,9 @@ import { HttpClientModule, HttpClient} from '@angular/common/http';
   declarations: [
     AppComponent,
     HomeComponent,
+    NewLoginComponent,
+    NewRegisterComponent,
+    NewDashboardComponent,
     //AboutComponent,
     //WebsiteListComponent,
     //SingleWebsiteComponent,             
@@ -39,6 +45,7 @@ import { HttpClientModule, HttpClient} from '@angular/common/http';
     MatInputModule,
     MatSelectModule,
     ReactiveFormsModule,
+    FormsModule,
     MatSnackBarModule,
     HttpClientModule,
     MatExpansionModule,

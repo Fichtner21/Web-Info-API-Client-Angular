@@ -16,5 +16,4 @@ export class WebsiteListComponent implements OnInit {
     const webinfos = await this.fromfileService.getWebsites();
     this.webinfos = webinfos;
   }
-
 }

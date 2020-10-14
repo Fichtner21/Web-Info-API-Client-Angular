@@ -1,7 +1,10 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <nav>
     <a mat-flat-button color="primary" routerLink="" class="btn">Home</a>
     <a mat-flat-button color="primary" routerLink="about" class="btn">About</a>
+    <a mat-flat-button color="primary" routerLink="new-login" class="btn">New Login</a>
+    <a mat-flat-button color="primary" routerLink="new-register" class="btn">New Register</a>
+    <a mat-flat-button color="primary" routerLink="new-dashboard" class="btn">New Dashboard</a>
   </nav>
   <ng-template #notAuthorized>
     <div> 
@@ -12,7 +15,7 @@
     <div *ngIf="isUserLogged$ | async; else notAuthorized">
         <button (click)="logout()" class="btn" mat-button>Log out</button>
     </div>
-</mat-toolbar>
+</mat-toolbar> -->
 
 <!-- <h4>mat-select</h4>
 <mat-form-field>
@@ -24,4 +27,15 @@
   </mat-select>
 </mat-form-field> -->
 
+<!-- <router-outlet></router-outlet> -->
+
+<mat-toolbar>
+  <a mat-flat-button class="navbar-brand" routerLink="home" routerLinkActive="active">Home</a>  
+  <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active">Home</a>  
+  <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="new-login" routerLinkActive="active">Login</a>  
+  <a mat-flat-button class="nav-link" *ngIf="logoutbtn" routerLink="about" routerLinkActive="active">About</a>  
+  <a mat-stroked-button type="button" *ngIf="logoutbtn" class="btn btn-block" (click)="logout()">Logout</a>  
+  <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="new-register" routerLinkActive="active">Registration</a>  
+  <a mat-flat-button class="nav-link" *ngIf="logoutbtn" routerLink="new-dashboard" routerLinkActive="active">Dashboard</a>  
+</mat-toolbar>
 <router-outlet></router-outlet>

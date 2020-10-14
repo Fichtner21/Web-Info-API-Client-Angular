@@ -199,5 +199,24 @@
         "translations": []
       }
     }
+  },
+  {
+    "shortname": "ernest",
+    "id": 3,
+    "plugins" : {
+      "tyczka" : "wtyczka1"
+    },
+    "plugins_active" : {
+
+    },
+    "theme" : {
+
+    },
+    "health_status": {
+
+    },
+    "transient" : {
+
+    }
   }
 ]} 

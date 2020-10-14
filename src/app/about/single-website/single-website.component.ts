@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Webinfo } from '../model/webinfo';
 import { ActivatedRoute } from '@angular/router';
 import { FromfileService } from '../fromfile.service';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-single-website',
@@ -13,22 +13,13 @@ export class SingleWebsiteComponent implements OnInit, OnDestroy {
   public webinfo: Webinfo;
   public errorMessage: string;  
 
-  constructor(private activatedRoute: ActivatedRoute, private fromfileService:FromfileService) { 
-    console.log(activatedRoute);
+  constructor(private activatedRoute: ActivatedRoute, private fromfileService:FromfileService, private location: Location) { 
+    console.log(activatedRoute);    
   }
 
   async ngOnInit(): Promise<void> {
     const shortname: string = this.activatedRoute.snapshot.params.shortname;   
-    console.log('shortname', shortname);
-    // this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
-    // this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
-    // console.log('THIS.WEBIFNO', this.webinfo);    
-   
-    // this.fromfileService.getSingleWebsite(shortname).subscribe(res => {
-    //  //this.webinfo = res.data.map(res => res.shortname);
-    //  //console.log('RES', this.webinfo);
-    //   console.log('RES', res);
-    // })
+    console.log('shortname', shortname);  
 
     this.webinfo = await this.fromfileService.getSingleWebsite(shortname);
     console.log(this.webinfo);
@@ -37,6 +28,11 @@ export class SingleWebsiteComponent implements OnInit, OnDestroy {
 
   public ngOnDestroy(): void{
     console.log('ngOnDestroy');
+  }
+
+  public goBack(): void{
+    this.location.back();
+    console.log('goBack()...');
   }
 
 }
