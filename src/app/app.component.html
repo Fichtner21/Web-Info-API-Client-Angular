@@ -31,7 +31,7 @@
 
 <mat-toolbar>
   <a mat-flat-button class="navbar-brand" routerLink="home" routerLinkActive="active">Home</a>  
-  <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active">Home</a>  
+  <!-- <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active">Home</a>   -->
   <a mat-flat-button class="nav-link" *ngIf="loginbtn" routerLink="new-login" routerLinkActive="active">Login</a>  
   <a mat-flat-button class="nav-link" *ngIf="logoutbtn" routerLink="about" routerLinkActive="active">About</a>  
   <a mat-stroked-button type="button" *ngIf="logoutbtn" class="btn btn-block" (click)="logout()">Logout</a>  
